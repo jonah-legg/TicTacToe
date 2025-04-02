@@ -40,7 +40,6 @@ class State {
 		this.checkState();
 		this.currentPlayer = (this.currentPlayer === 0) ? 1 : 0;
 		if (this.currentPlayer === 1 && this.difficulty !== "player") {
-      console.log(this.difficulty);
 			this.ai.makeAiMove();
 			this.checkState();
 			this.currentPlayer = (this.currentPlayer === 0) ? 1 : 0;
