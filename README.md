@@ -41,14 +41,6 @@ Here are the Mutually Orthogonal Latin Squares of order 4, used in the game:
 | 2 | 1 | 3 | 0 |
 | 3 | 0 | 2 | 1 |
 
-### Explanation
-
-- **Simple Table Format**: Each MOLS is presented in a straightforward table format, using Markdown's table syntax. The values in each square are clearly laid out in a 4x4 grid.
-- **Delineation**: Each square is encapsulated within a code block (using triple backticks) to visually separate them from other text and maintain a clear structure.
-- **Section Titles**: Each grid is preceded by a section title (`MOLS 1`, `MOLS 2`, `MOLS 3`), providing easy identification and reference within the document.
-
-This formatting ensures that the data is presented neatly and is easy to read, without extraneous information, focusing on the values within the Latin squares themselves.
-
 ## Installation
 
 Clone the repository to your local machine:
