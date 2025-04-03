@@ -133,7 +133,7 @@ class AI {
     let potential = 0;
     let isBlocked = false;
     for (let row = 0; row < 4; row++) {
-        let col = this.MOLS[molsIndex][row].indexOf(symbol);
+        let col = this.gameState.MOLS[molsIndex][row].indexOf(symbol);
         if (this.gameState.gameBoard[`${row},${col}`] === player) {
             potential++;
         } else if (this.gameState.gameBoard[`${row},${col}`] !== '') {
