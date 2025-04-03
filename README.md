@@ -10,7 +10,7 @@ In this version of tic-tac-toe, the game board is expanded into multiple layers,
 
 1. **Game Board**: The board is a 4x4 grid with lines representing the affine plane.
 2. **Objective**: The objective is to align four of your symbols ('X' or 'O') on lines defined by this plane. A line is completed when one player "owns" all spots on this line.
-3. **Winning**: A player wins by completing any line in any MOLS before their opponent.
+3. **Winning**: A player wins by completing any line on the plane before their opponent.
 4. **Turns**: Players alternate turns, placing one symbol per turn on the grid.
 
 DISCLAIMER:
