@@ -104,7 +104,7 @@ class AI {
     return emptyCells[Math.floor(Math.random() * emptyCells.length)];
   }
 
-  evaluatePosition(i, j) {
+  evaluateMove(i, j) {
     let score = 0;
 
     for (let m = 0; m < this.MOLS.length; m++) {
