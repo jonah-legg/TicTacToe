@@ -19,7 +19,7 @@ class AI {
       // for learning the rules of the game
 			ChosenCell = emptyCells[Math.floor(Math.random() * emptyCells.length)];
 		} else if (this.gameState.difficulty === "medium") {
-			// TO DO: Implement medium difficulty
+			// TO DO: Implement medium difficulty AI
 			ChosenCell = this.medAI(emptyCells);
 		} else if (this.gameState.difficulty === "hard") {
 			// Hard AI holds a relatively simple process of events:
