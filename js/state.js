@@ -24,6 +24,20 @@ class State {
 				[2, 3, 0, 1],
 				[3, 2, 1, 0],
 				[1, 0, 3, 2]
+			],
+			// All vertical and horizontal lines are not actually MOLS's but rather simply
+			// the lines that show the affine plane of order 4
+			[
+				[0, 1, 2, 3],
+				[0, 1, 2, 3],
+				[0, 1, 2, 3],
+				[0, 1, 2, 3]
+			],
+			[
+				[0, 0, 0, 0],
+				[1, 1, 1, 1],
+				[2, 2, 2, 2],
+				[3, 3, 3, 3]
 			]
 		];
 	}
