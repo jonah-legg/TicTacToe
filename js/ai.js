@@ -107,8 +107,8 @@ class AI {
   evaluateMove(i, j) {
     let score = 0;
 
-    for (let m = 0; m < this.MOLS.length; m++) {
-        let symbol = this.MOLS[m][i][j];
+    for (let m = 0; m < this.gameState.MOLS.length; m++) {
+        let symbol = this.gameState.MOLS[m][i][j];
 
         // Calculate the potential of completing a line for 'O'
         let ownLinePotential = this.linePotential(m, symbol, 'O');
