@@ -107,8 +107,8 @@ class AI {
   evaluateMove(i, j) {
     let score = 0;
 
-    for (let m = 0; m < this.gameState.MOLS.length; m++) {
-        let symbol = this.gameState.MOLS[m][i][j];
+    for (let m = 0; m < this.gameState.ParallelClasses.length; m++) {
+        let symbol = this.gameState.ParallelClasses[m][i][j];
 
         // Calculate the potential of completing a line for 'O'
         let ownLinePotential = this.linePotential(m, symbol, 'O');
@@ -128,12 +128,12 @@ class AI {
     return score;
   }
 
-  // Helper function to calculate the potential of a line in a given MOLS and symbol
-  linePotential(molsIndex, symbol, player) {
+  // Helper function to calculate the potential of a line in a given ParallelClasses and symbol
+  linePotential(ParallelClassesIndex, symbol, player) {
     let potential = 0;
     let isBlocked = false;
     for (let row = 0; row < 4; row++) {
-        let col = this.gameState.MOLS[molsIndex][row].indexOf(symbol);
+        let col = this.gameState.ParallelClasses[ParallelClassesIndex][row].indexOf(symbol);
         if (this.gameState.gameBoard[`${row},${col}`] === player) {
             potential++;
         } else if (this.gameState.gameBoard[`${row},${col}`] !== '') {

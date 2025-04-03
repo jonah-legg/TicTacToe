@@ -6,7 +6,7 @@ class State {
 		this.ai = new AI(this);
 		this.gameBoard = {};
 		this.difficulty = "";
-		this.MOLS = [
+		this.ParallelClasses = [
 			[
 				[0, 1, 2, 3],
 				[1, 0, 3, 2],
@@ -25,8 +25,6 @@ class State {
 				[3, 2, 1, 0],
 				[1, 0, 3, 2]
 			],
-			// All vertical and horizontal lines are not actually MOLS's but rather simply
-			// the lines that show the affine plane of order 4
 			[
 				[0, 1, 2, 3],
 				[0, 1, 2, 3],
@@ -65,12 +63,12 @@ class State {
 	}
 
 	checkWin() {
-		for (let i = 0; i < this.MOLS.length; i++) {
+		for (let i = 0; i < this.ParallelClasses.length; i++) {
 			for (let symbol = 0; symbol < 4; symbol++) {
 				let player = null;
 				let hasLine = true;
 				for (let row = 0; row < 4; row++) {
-					let col = this.MOLS[i][row].indexOf(symbol);
+					let col = this.ParallelClasses[i][row].indexOf(symbol);
 					if (this.gameBoard[`${row},${col}`] === '') {
 						hasLine = false;
 						break;
