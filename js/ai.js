@@ -28,7 +28,8 @@ class AI {
 			// Hard AI holds a relatively simple process of events:
       // 1. If there is potential win, it chooses that win
       // 2. If there is a potential opponent win, it blocks that win
-      // 3. It randomly chooses a cell
+      // 3. Finds best move, picks said move
+      // 4. As a fall back, chooses random cell
 			ChosenCell = this.hardAI(emptyCells);
 		}
 		this.gameState.gameBoard[ChosenCell] = 'O';
@@ -62,7 +63,7 @@ class AI {
   }
 
   hardAI(emptyCells) {
-    let bestScore = -Infinity;
+    let bestScore = 0;
     let bestMove = null;
 
     for (let cell of emptyCells) {
