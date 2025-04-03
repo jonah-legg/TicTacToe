@@ -130,23 +130,23 @@ class State {
 			document.getElementById("game-board").style.pointerEvents = "";
 		});
 
-    document.getElementById("change-difficulty").addEventListener("click", () => {
+		document.getElementById("change-difficulty").addEventListener("click", () => {
 			this.resetGame();
-      document.getElementById("game-over-menu").style.display = "none";
+			document.getElementById("game-over-menu").style.display = "none";
 
 			document.getElementById("difficulty-menu").style.display = "block";
-	    document.getElementById("game-board").style.display = "none";
+			document.getElementById("game-board").style.display = "none";
 
 			document.getElementById("game-board").style.filter = "";
 			document.getElementById("game-board").style.pointerEvents = "";
 		});
 
-    document.getElementById("exit-game").addEventListener("click", () => {
+		document.getElementById("exit-game").addEventListener("click", () => {
 			this.resetGame();
-      document.getElementById("game-over-menu").style.display = "none";
-			
-      document.getElementById("start-menu").style.display = "block";
-	    document.getElementById("game-board").style.display = "none";
+			document.getElementById("game-over-menu").style.display = "none";
+
+			document.getElementById("start-menu").style.display = "block";
+			document.getElementById("game-board").style.display = "none";
 
 			document.getElementById("game-board").style.filter = "";
 			document.getElementById("game-board").style.pointerEvents = "";
