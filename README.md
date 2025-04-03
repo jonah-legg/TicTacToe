@@ -46,5 +46,5 @@ Here are the Mutually Orthogonal Latin Squares of order 4, used in the game:
 Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/affine-plane-tic-tac-toe.git
-cd affine-plane-tic-tac-toe
+git clone https://github.com/jonah-legg/TicTacToe.git
+cd TicTacToe
