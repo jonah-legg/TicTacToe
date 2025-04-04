@@ -88,9 +88,9 @@ class State {
 			} else {
 				// Check horizontal lines
 				for (let symbol = 0; symbol < 4; symbol++) {
-					let player = null;
-					let hasLine = true;
 					for (let row = 0; row < 4; row++) {
+						let player = null;
+						let hasLine = true;
 						for (let col = 0; col < 4; col++) {
 							if (this.gameBoard[`${row},${col}`] === '') {
 								hasLine = false;
