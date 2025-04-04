@@ -33,7 +33,9 @@ document.getElementById("easy-button").addEventListener("click", function() {
 	gameState.initializeGameBoard();
 	for (let i = 0; i < 16; i++) {
 		document.getElementById(`${Math.floor(i / 4)},${i % 4}`).addEventListener('click', function() {
-			player.makeMove(i);
+			if (gameState.currentPlayer == 0) {
+				player.makeMove(i);
+			}
 		});
 	}
 });
@@ -45,7 +47,9 @@ document.getElementById("medium-button").addEventListener("click", function() {
 	gameState.initializeGameBoard();
 	for (let i = 0; i < 16; i++) {
 		document.getElementById(`${Math.floor(i / 4)},${i % 4}`).addEventListener('click', function() {
-			player.makeMove(i);
+			if (gameState.currentPlayer == 0) {
+				player.makeMove(i);
+			}
 		});
 	}
 });
@@ -57,7 +61,9 @@ document.getElementById("hard-button").addEventListener("click", function() {
 	gameState.initializeGameBoard();
 	for (let i = 0; i < 16; i++) {
 		document.getElementById(`${Math.floor(i / 4)},${i % 4}`).addEventListener('click', function() {
-			player.makeMove(i);
+			if (gameState.currentPlayer == 0) {
+				player.makeMove(i);
+			}
 		});
 	}
 });
