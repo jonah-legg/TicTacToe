@@ -50,14 +50,12 @@ class State {
 
 	switchPlayer() {
 		this.checkState();
-		setTimeout(() => {
+		this.currentPlayer = (this.currentPlayer === 0) ? 1 : 0;
+		if (this.currentPlayer === 1 && this.difficulty !== "player") {
+			this.ai.makeAiMove();
+			this.checkState();
 			this.currentPlayer = (this.currentPlayer === 0) ? 1 : 0;
-			if (this.currentPlayer === 1 && this.difficulty !== "player") {
-				this.ai.makeAiMove();
-				this.checkState();
-				this.currentPlayer = (this.currentPlayer === 0) ? 1 : 0;
-			}
-		}, 1000);
+		}
 	}
 
 	get currentPlayerSymbol() {
@@ -148,9 +146,7 @@ class State {
 	gameOver(winner) {
 		document.getElementById("game-over-menu").style.display = "block";
 		document.getElementById("game-over-menu").style.opacity = 0;
-		setTimeout(() => {
-			document.getElementById("game-over-menu").style.opacity = 1;
-		}, 100);
+		document.getElementById("game-over-menu").style.opacity = 1;
 
 		document.getElementById("game-board").style.filter = "blur(10px)";
 		document.getElementById("game-board").style.pointerEvents = "none";
