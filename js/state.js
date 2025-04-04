@@ -50,12 +50,14 @@ class State {
 
 	switchPlayer() {
 		this.checkState();
-		this.currentPlayer = (this.currentPlayer === 0) ? 1 : 0;
-		if (this.currentPlayer === 1 && this.difficulty !== "player") {
-			this.ai.makeAiMove();
-			this.checkState();
+		setTimeout(() => {
 			this.currentPlayer = (this.currentPlayer === 0) ? 1 : 0;
-		}
+			if (this.currentPlayer === 1 && this.difficulty !== "player") {
+				this.ai.makeAiMove();
+				this.checkState();
+				this.currentPlayer = (this.currentPlayer === 0) ? 1 : 0;
+			}
+		}, 1000);
 	}
 
 	get currentPlayerSymbol() {
