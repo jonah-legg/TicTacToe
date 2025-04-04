@@ -64,25 +64,49 @@ class State {
 
 	checkWin() {
 		for (let i = 0; i < this.ParallelClasses.length; i++) {
-			for (let symbol = 0; symbol < 4; symbol++) {
-				let player = null;
-				let hasLine = true;
-				for (let row = 0; row < 4; row++) {
-					// Get the column index for the current row and symbol
-					let col = this.ParallelClasses[i][row][symbol];
-					if (this.gameBoard[`${row},${col}`] === '') {
-						hasLine = false;
-						break;
+			if (i < 4) {
+				for (let symbol = 0; symbol < 4; symbol++) {
+					let player = null;
+					let hasLine = true;
+					for (let row = 0; row < 4; row++) {
+						let col = this.ParallelClasses[i][row].indexOf(symbol);
+						if (this.gameBoard[`${row},${col}`] === '') {
+							hasLine = false;
+							break;
+						}
+						if (player === null) {
+							player = this.gameBoard[`${row},${col}`];
+						} else if (this.gameBoard[`${row},${col}`] !== player) {
+							hasLine = false;
+							break;
+						}
 					}
-					if (player === null) {
-						player = this.gameBoard[`${row},${col}`];
-					} else if (this.gameBoard[`${row},${col}`] !== player) {
-						hasLine = false;
-						break;
+					if (hasLine) {
+						return player;
 					}
 				}
-				if (hasLine) {
-					return player;
+			} else {
+				// Check horizontal lines
+				for (let symbol = 0; symbol < 4; symbol++) {
+					let player = null;
+					let hasLine = true;
+					for (let row = 0; row < 4; row++) {
+						for (let col = 0; col < 4; col++) {
+							if (this.gameBoard[`${row},${col}`] === '') {
+								hasLine = false;
+								break;
+							}
+							if (player === null) {
+								player = this.gameBoard[`${row},${col}`];
+							} else if (this.gameBoard[`${row},${col}`] !== player) {
+								hasLine = false;
+								break;
+							}
+						}
+					}
+					if (hasLine) {
+						return player;
+					}
 				}
 			}
 		}
