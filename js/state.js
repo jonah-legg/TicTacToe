@@ -103,9 +103,9 @@ class State {
 								break;
 							}
 						}
-					}
-					if (hasLine) {
-						return player;
+						if (hasLine) {
+							return player;
+						}
 					}
 				}
 			}
