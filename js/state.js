@@ -68,7 +68,8 @@ class State {
 				let player = null;
 				let hasLine = true;
 				for (let row = 0; row < 4; row++) {
-					let col = this.ParallelClasses[i][row].indexOf(symbol);
+					// Get the column index for the current row and symbol
+					let col = this.ParallelClasses[i][row][symbol];
 					if (this.gameBoard[`${row},${col}`] === '') {
 						hasLine = false;
 						break;
